@@ -1,0 +1,164 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2d3748, #2a5298);
+    color: #2d3748;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: #e2e8f0;
+    
+}
+
+nav h1 {
+    font-weight: 600;
+    color:#2d3748 ;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    cursor: pointer;
+    transition: 0.3s;
+    color: #2d3748;
+}
+
+nav ul li:hover {
+    color: #38bdf8;
+}
+.social-icons a {
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.social-icons i {
+    color: #38bdf8;
+    transition: 0.3s ease;
+}
+
+.social-icons i:hover {
+    transform: scale(1.2);
+    color: #0ea5e9;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 50px;
+}
+.form-section,
+.todo-section {
+    background: #e2e8f0;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease-in-out;
+}
+
+.form-section:hover,
+.todo-section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #1e3c72;
+}
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus {
+    border-color: #2a5298;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #1e3c72;
+    color: white;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #2a5298;
+    transform: scale(1.03);
+}
+.error {
+    color: #dc2626;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.todo-section ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.todo-section li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f1f5f9;
+    color: #1e293b;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.todo-section li:hover {
+    transform: scale(1.02);
+}
+
+.todo-section li button {
+    width: auto;
+    padding: 6px 12px;
+    background: #1e3c72;
+    color: white;
+    border-radius: 6px;
+}
+
+.todo-section li button:hover {
+    background: #1e3c72;
+}
+
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
